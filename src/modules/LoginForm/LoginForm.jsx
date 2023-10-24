@@ -17,7 +17,11 @@ const LoginForm = ({ onSubmit }) => {
 
 	return (
 		<form onSubmit={handleSubmit} className={styles.form}>
-			<TextField value={name} onChange={handleChange} {...fields.name} />
+			<TextField
+				value={name}
+				onChange={handleChange}
+				{...fields.name}
+			/>
 			<TextField
 				value={password}
 				onChange={handleChange}
