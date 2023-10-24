@@ -1,7 +1,7 @@
 const fields = {
 	name: {
 		label: "User name",
-		name: "name",
+		name: "username",
 		type: "text",
 		required: true,
 		placeholder: "User name",
