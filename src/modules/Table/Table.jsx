@@ -44,7 +44,7 @@ const Table = () => {
 			{tableData.results &&
 				tableData.results.map(
 					({ id, name, email, birthday_date, phone_number, address }) => (
-						<tr key={id} className={styles.table}>
+						<tr key={id}>
 							<td className={styles.td}>{name}</td>
 							<td className={styles.td}>{email}</td>
 							<td className={styles.td}>{birthday_date}</td>
