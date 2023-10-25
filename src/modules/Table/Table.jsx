@@ -57,10 +57,16 @@ const Table = () => {
 								<td className={styles.td}>{birthday_date}</td>
 								<td className={styles.td}>{phone_number}</td>
 								<td className={styles.td}>{address}</td>
-								<button onClick={() => setDeletedId(id)} type="button">
-									Delete
+								<button
+									className={styles.btn}
+									onClick={() => setDeletedId(id)}
+									type="button"
+								>
+									-
 								</button>
-								<button type="button">Add</button>
+								<button className={styles.btn} type="button">
+									+
+								</button>
 							</tr>
 						),
 					)}
