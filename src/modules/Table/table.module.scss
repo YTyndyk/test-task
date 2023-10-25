@@ -1,0 +1,60 @@
+.td {
+	max-width: 200px;
+	text-align: left;
+}
+.tb {
+	&:hover {
+		background-color: rgb(115, 120, 175);
+		box-shadow: 0 6px 6px -6px #0e1119;
+		color: #000;
+		// text-shadow: 0.0625rem 0.0625rem 0.0625rem #400075;
+	}
+	// :nth-child(even) {
+	// 	background-color: #e9edff;
+	// }
+
+	// :nth-child(odd) {
+	// 	border: 0.1875rem solid #e9edff;
+	// 	border-radius: 0.5rem;
+	// 	background-color: transparent;
+	// }
+}
+.table {
+	padding-left: 16px;
+	border-right: 0.125rem solid #e9edff;
+
+	&:hover {
+		background-color: rgb(115, 120, 175);
+		color: #000;
+
+		box-shadow: rgb(115, 120, 175) -1px 1px, rgb(115, 120, 175) -2px 2px,
+			rgb(115, 120, 175) -3px 3px, rgb(115, 120, 175) -4px 4px,
+			rgb(115, 120, 175) -5px 5px, rgb(115, 120, 175) -6px 6px;
+		transform: translate3d(6px, -6px, 0);
+
+		transition-delay: 0s;
+		transition-duration: 0.4s;
+		transition-property: all;
+		transition-timing-function: line;
+	}
+}
+.th {
+	margin-bottom: 20px;
+	padding: 16px;
+	padding-left: 16px;
+	text-align: left;
+	width: 200px;
+	border-radius: medium;
+	box-shadow: -0.0625rem -0.0625rem 0.0625rem #fff,
+		0.0625rem 0.0625rem 0.0625rem #babecc;
+}
+.tableRaw {
+	border-radius: medium;
+	background-color: #e9edff;
+	color: #2a2a2a;
+	text-shadow: 0.0625rem 0.0625rem 0.0625rem #fff;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+.td {
+}
