@@ -8,7 +8,10 @@ export const gettableData = async () => {
 	const { data } = await tableinstance.get("/table/");
 	return data;
 };
+export const addBook = (data) => {
+	return tableinstance.post("/table", data);
+};
 export const deleteTableDataEl = async () => {
-	const { data } = await tableinstance.delete(`/${id}`);
+	const { data } = await tableinstance.delete(`/table/${id}`);
 	return data;
 };

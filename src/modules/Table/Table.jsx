@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { gettableData, deleteTableDataEl } from "../../shared/api/table";
-
 import styles from "./table.module.scss";
+import TableHeader from "../TableHeader/TableHeader";
 
 const Table = () => {
 	const [tableData, setTableData] = useState([]);
@@ -39,52 +39,38 @@ const Table = () => {
 		}
 	}, [deletedId]);
 
-	let content;
-
-	if (loading) {
-		content = <p>Loading...</p>;
-	} else if (error) {
-		content = <p className={styles.error}>{error}</p>;
-	} else {
-		content = (
-			<tb className={styles.tb}>
-				{tableData.results &&
-					tableData.results.map(
-						({ id, name, email, birthday_date, phone_number, address }) => (
-							<tr key={id} className={styles.table}>
-								<td className={styles.td}>{name}</td>
-								<td className={styles.td}>{email}</td>
-								<td className={styles.td}>{birthday_date}</td>
-								<td className={styles.td}>{phone_number}</td>
-								<td className={styles.td}>{address}</td>
-								<button
-									className={styles.btn}
-									onClick={() => setDeletedId(id)}
-									type="button"
-								>
-									-
-								</button>
-								<button className={styles.btn} type="button">
-									+
-								</button>
-							</tr>
-						),
-					)}
-			</tb>
-		);
-	}
+	const content = (
+		<tb className={styles.tb}>
+			{tableData.results &&
+				tableData.results.map(
+					({ id, name, email, birthday_date, phone_number, address }) => (
+						<tr key={id} className={styles.table}>
+							<td className={styles.td}>{name}</td>
+							<td className={styles.td}>{email}</td>
+							<td className={styles.td}>{birthday_date}</td>
+							<td className={styles.td}>{phone_number}</td>
+							<td className={styles.td}>{address}</td>
+							<button
+								className={styles.btn}
+								onClick={() => setDeletedId(id)}
+								type="button"
+							>
+								-
+							</button>
+							<button className={styles.btn} type="button">
+								+
+							</button>
+						</tr>
+					),
+				)}
+		</tb>
+	);
 
 	return (
 		<>
-			<thead className={styles.thead}>
-				<tr className={styles.tableRaw}>
-					<th className={styles.th}>Name</th>
-					<th className={styles.th}>Email</th>
-					<th className={styles.th}>Birthday_date</th>
-					<th className={styles.th}>Phone_number</th>
-					<th className={styles.th}>Adress</th>
-				</tr>
-			</thead>
+			{loading && <p>...Loading</p>}
+			{error && <p className={styles.error}>{error}</p>}
+			<TableHeader />
 			<div>{content}</div>
 		</>
 	);

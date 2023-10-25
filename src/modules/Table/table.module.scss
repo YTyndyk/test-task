@@ -26,26 +26,9 @@
 		transition-timing-function: line;
 	}
 }
-.th {
-	margin-bottom: 20px;
-	padding: 16px;
-	padding-left: 16px;
-	text-align: left;
-	width: 200px;
-	border-radius: medium;
-	box-shadow: -0.0625rem -0.0625rem 0.0625rem #fff,
-		0.0625rem 0.0625rem 0.0625rem #babecc;
-}
-.tableRaw {
-	border-radius: medium;
-	background-color: #e9edff;
-	color: #2a2a2a;
-	text-shadow: 0.0625rem 0.0625rem 0.0625rem #fff;
-	font-size: 1rem;
-	text-transform: uppercase;
-}
+
 .td {
-	min-width: 200px;
+	width: 1280px;
 	text-align: left;
 	padding-left: 16px;
 	display: table-cell;
@@ -56,4 +39,12 @@
 	width: 30px;
 	padding: 5px;
 	border-color: #babecc;
+	color: #000;
+
+	&:hover,
+	&:focus {
+		background-color: #400075;
+		color: #e9edff;
+		background-color: transparent;
+	}
 }
