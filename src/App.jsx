@@ -12,7 +12,7 @@ function App() {
 	return (
 		<Provider store={store}>
 			<PersistGate loading={null} persistor={persistor}>
-				<BrowserRouter>
+				<BrowserRouter basename="/test-task">
 					<Navbar />
 					<UserRoutes />
 				</BrowserRouter>
