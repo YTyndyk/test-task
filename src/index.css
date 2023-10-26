@@ -33,6 +33,7 @@ a:hover {
 }
 
 body {
+	background-color: #a2a6eb;
 	margin: 0;
 	display: flex;
 	place-items: center;

@@ -1,30 +1,7 @@
-.tb {
-	&:hover {
-		background-color: rgb(115, 120, 175);
-		box-shadow: 0 6px 6px -6px #0e1119;
-		color: #000;
-		// text-shadow: 0.0625rem 0.0625rem 0.0625rem #400075;
-	}
-}
 .table {
 	max-width: 1280px;
 	padding-left: 16px;
 	border-right: 0.125rem solid hsl(229, 100%, 96%);
-
-	// &:hover {
-	// 	background-color: rgb(115, 120, 175);
-	// 	color: #000;
-
-	// 	box-shadow: rgb(115, 120, 175) -1px 1px, rgb(115, 120, 175) -2px 2px,
-	// 		rgb(115, 120, 175) -3px 3px, rgb(115, 120, 175) -4px 4px,
-	// 		rgb(115, 120, 175) -5px 5px, rgb(115, 120, 175) -6px 6px;
-	// 	transform: translate3d(6px, -6px, 0);
-
-	// 	transition-delay: 0s;
-	// 	transition-duration: 0.4s;
-	// 	transition-property: all;
-	// 	transition-timing-function: line;
-	// }
 }
 
 .td {
@@ -57,8 +34,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: #400075;
+		background-color: rgb(115, 120, 175);
 		color: #e9edff;
-		background-color: transparent;
 	}
 }
